@@ -1,0 +1,135 @@
+﻿<Window x:Class="Dem6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dem6"
+        mc:Ignorable="d"
+        Title="Путешествуй по России" MinHeight="900" MinWidth="1800" MaxHeight="900" MaxWidth="1800"
+        WindowStartupLocation="CenterScreen" Icon="/Resources/logo.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="750"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Height="150" VerticalAlignment="Top">
+            <Image Source="/Resources/logo.png"/>
+            <TextBlock Width="100"/>
+            <Border Width="500" Margin="15" Style="{StaticResource BorderMW}">
+                <TextBox Text="Поиск" BorderBrush="Transparent" Style="{StaticResource TextBoxMW}"/>
+            </Border>
+            <Border Style="{StaticResource BorderMW2}">
+                <Button Content="Туры" Style="{StaticResource BtnMW}"/>
+            </Border>
+            <Border Style="{StaticResource BorderMW2}">
+                <Button Content="Отели" Style="{StaticResource BtnMW}"/>
+            </Border>
+            <Border Style="{StaticResource BorderMW2}" Width="300">
+                <Button Content="Добавить отель" x:Name="AddHotel" Style="{StaticResource BtnMW}" Click="AddHotel_Click"/>
+            </Border>
+            <Border Style="{StaticResource BorderMW2}">
+                <Button Content="Отзывы" Style="{StaticResource BtnMW}"/>
+            </Border>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="350"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="350"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="520"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="520"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="520"/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Style="{StaticResource BorderMW}" Grid.Row="1" Grid.Column="1">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource TextBlockMW}" Text="Болгарское наследие"/>
+                    <Image Source="/Resources/Болгарское наследие.jpg" Height="200" Width="260"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="35 700 P." Style="{StaticResource TextBlockMW}" FontSize="42"/>
+                        <TextBlock Width="70"/>
+                        <Button Content="Просмотреть" Style="{StaticResource BtnMW2}"/>
+                     </StackPanel>
+                    <TextBlock Text="Актуален" Style="{StaticResource TextBlockAct}"/>
+                </StackPanel>
+            </Border>
+
+
+            <Border Style="{StaticResource BorderMW}" Grid.Row="1" Grid.Column="3">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource TextBlockMW}" Text="Волшебный Восток"/>
+                    <Image Source="/Resources/Волшебный Восток (1).jpg" Height="200" Width="310"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="77 100 P." Style="{StaticResource TextBlockMW}" FontSize="42"/>
+                        <TextBlock Width="70"/>
+                        <Button Content="Просмотреть" Style="{StaticResource BtnMW2}"/>
+                    </StackPanel>
+                    <TextBlock Text="Актуален" Style="{StaticResource TextBlockAct}"/>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource BorderMW}" Grid.Row="1" Grid.Column="5">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource TextBlockMW}" Text="Город с большими амбициями"/>
+                    <Image Source="/Resources/Город с большими амбициями.jpg" Height="200" Width="260"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="93 300 P." Style="{StaticResource TextBlockMW}" FontSize="42"/>
+                        <TextBlock Width="70"/>
+                        <Button Content="Просмотреть" Style="{StaticResource BtnMW2}"/>
+                    </StackPanel>
+                    <TextBlock Text="Актуален" Style="{StaticResource TextBlockAct}"/>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource BorderMW}" Grid.Row="3" Grid.Column="1">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource TextBlockMW}" Text="Город четырех ворот"/>
+                    <Image Source="/Resources/Город четырех ворот.jpg" Height="200" Width="350"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="93 300 P." Style="{StaticResource TextBlockMW}" FontSize="42"/>
+                        <TextBlock Width="70"/>
+                        <Button Content="Просмотреть" Style="{StaticResource BtnMW2}"/>
+                    </StackPanel>
+                    <TextBlock Text="Актуален" Style="{StaticResource TextBlockAct}"/>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource BorderMW}" Grid.Row="3" Grid.Column="3">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource TextBlockMW}" Text="Горячий отдых зимой и летом"/>
+                    <Image Source="/Resources/Древний Минск.jpg" Height="200" Width="270"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="72 500 P." Style="{StaticResource TextBlockMW}" FontSize="42"/>
+                        <TextBlock Width="70"/>
+                        <Button Content="Просмотреть" Style="{StaticResource BtnMW2}"/>
+                    </StackPanel>
+                    <TextBlock Text="Не актуален" Foreground="Red" Style="{StaticResource TextBlockAct}"/>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource BorderMW}" Grid.Row="3" Grid.Column="5">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource TextBlockMW}" Text="Древний Минск"/>
+                    <Image Source="/Resources/Жемчужина Татарстана.jpg" Height="200" Width="290"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="31 900 P." Style="{StaticResource TextBlockMW}" FontSize="42"/>
+                        <TextBlock Width="70"/>
+                        <Button Content="Просмотреть" Style="{StaticResource BtnMW2}"/>
+                    </StackPanel>
+                    <TextBlock Text="Актуален" Style="{StaticResource TextBlockAct}"/>
+                </StackPanel>
+            </Border>
+
+            <Frame x:Name="MainFrm" NavigationUIVisibility="Hidden" Grid.ColumnSpan="7" Grid.RowSpan="5"/>
+
+        </Grid>
+    </Grid>
+</Window>
